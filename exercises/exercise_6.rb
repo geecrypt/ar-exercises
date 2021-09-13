@@ -14,7 +14,16 @@ require_relative './exercise_3'
 require_relative './exercise_4'
 require_relative './exercise_5'
 
-puts "Exercise 6"
-puts "----------"
+puts 'Exercise 6'
+puts '----------'
 
 # Your code goes here ...
+@store1.employees.create(first_name: 'Bob', last_name: 'Loblaw', hourly_rate: '69')
+@store1.employees.create(first_name: 'Sam', last_name: 'Sammy', hourly_rate: '20')
+@store1.employees.create(first_name: 'Jude', last_name: 'Judy', hourly_rate: '30')
+@store2.employees.create(first_name: 'Lisa', last_name: 'Lisy', hourly_rate: '459')
+@store2.employees.create(first_name: 'Tom', last_name: 'Tommy', hourly_rate: '1')
+@store2.employees.create(first_name: 'Marge', last_name: 'Margey', hourly_rate: '49')
+Employee.find_each do |e|
+  puts e.first_name
+end
