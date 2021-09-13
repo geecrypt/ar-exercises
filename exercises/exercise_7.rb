@@ -22,3 +22,9 @@ puts 'Exercise 7'
 puts '----------'
 
 # Your code goes here ...
+@newStore = Store.new
+@newStore.name = gets.chomp
+@newStore.save
+@newStore.errors.messages.each do |err|
+  puts err
+end
