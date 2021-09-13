@@ -11,8 +11,8 @@ puts '----------'
 
 # Your code goes below here ...
 Store.create(name: 'Burnaby', annual_revenue: 300_000, mens_apparel: true, womens_apparel: true)
-Store.create(name: 'Richmond', annual_revenue: 1_260_000, womens_apparel: true)
-Store.create(name: 'Gastown', annual_revenue: 190_000, mens_apparel: true)
+Store.create(name: 'Richmond', annual_revenue: 1_260_000, mens_apparel: false, womens_apparel: true)
+Store.create(name: 'Gastown', annual_revenue: 190_000, mens_apparel: true, womens_apparel: false)
 
 puts "There are #{Store.count} stores:"
 Store.find_each do |store|
